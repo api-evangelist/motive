@@ -69,6 +69,8 @@ common:
     url: https://twitter.com/Motive_inc
   - type: Blog
     url: https://gomotive.com/blog/
+  - type: BlogRSS
+    url: https://gomotive.com/blog/feed
   - type: StatusPage
     url: https://status.gomotive.com/
   - type: TermsOfService
@@ -79,6 +81,10 @@ common:
     url: rate-limits/motive-rate-limits.yml
   - type: FinOps
     url: finops/motive-finops.yml
+  - type: BlogIndex
+    url: blogs/blogs.json
+  - type: JSONLDContext
+    url: json-ld/motive-context.jsonld
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
