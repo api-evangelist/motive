@@ -1,0 +1,58 @@
+spec: FinOps Framework 1.0
+provider: Motive
+providerId: motive
+created: 2026-06-12
+modified: 2026-06-12
+description: >
+  Motive API costs are not metered at the API call level for most customers. Costs are driven
+  by fleet subscription seats (per vehicle per month) rather than individual API transactions.
+  Enterprise and partner tiers may have negotiated usage-based arrangements. FinOps practices
+  should focus on vehicle seat optimization, data egress from fleet telemetry, and integration
+  efficiency to reduce redundant polling.
+billingModel: subscription
+focusColumns:
+  - ChargeType: Usage
+  - ServiceName: Motive Fleet API
+  - ResourceType: VehicleSeat
+  - ChargeCategory: Usage
+  - BillingPeriod: Monthly
+  - BilledCurrency: USD
+  - PricingUnit: vehicle/month
+  - ListUnitPrice: 35.00
+  - EffectiveCost: negotiated
+meters:
+  - name: VehicleSeat
+    description: Per-vehicle monthly subscription that unlocks API access and fleet management features.
+    unit: vehicle/month
+    estimatedUnitCost: 35.00
+    currency: USD
+    notes: Estimated market rate; actual cost requires a sales quote from Motive.
+  - name: APITransaction
+    description: >
+      Transaction volume is governed by Motive rate limit policy. No public per-call charge;
+      transactions are included in the subscription. Very high-volume partners may face
+      negotiated limits or surcharges.
+    unit: request
+    estimatedUnitCost: 0.00
+    currency: USD
+    notes: No published per-call fee; included in subscription tier.
+principles:
+  - name: Right-Size Polling
+    description: >
+      Use webhooks and subscription-based location services instead of high-frequency polling
+      to stay within rate limits and reduce unnecessary API load.
+  - name: Seat Optimization
+    description: >
+      Audit active vehicle seats regularly. Decommission or reassign seats for inactive
+      vehicles to reduce monthly subscription costs.
+  - name: Scope Minimization
+    description: >
+      Request only the OAuth scopes required for each integration. Narrower scopes simplify
+      security reviews and reduce blast radius if a token is compromised.
+  - name: Webhook Reliability
+    description: >
+      Leverage Motive's webhook retry history to confirm event delivery rather than
+      compensating with redundant REST polling, which consumes quota unnecessarily.
+contact:
+  sales: https://gomotive.com/contact/
+  techPartners: techpartners@gomotive.com

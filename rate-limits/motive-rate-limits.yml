@@ -1,0 +1,44 @@
+spec: API Commons Rate Limits 0.1
+provider: Motive
+providerId: motive
+created: 2026-06-12
+modified: 2026-06-12
+description: >
+  Motive reserves the right to limit the number of API transactions sent or received at any
+  time, per the API Terms of Service. Specific numeric thresholds are not publicly documented
+  and may vary by account tier and partner agreement. Developers should implement exponential
+  backoff on 429 responses and contact apisupport@gomotive.com for current limit details.
+rateLimits:
+  - name: General API Rate Limit
+    description: >
+      Motive may impose per-account or per-endpoint transaction limits at its discretion.
+      No publicly documented numeric value; limits may differ between Developer and
+      commercial subscription tiers.
+    scope: account
+    limitPublished: false
+    throttledStatusCode: 429
+    retryAfterHeader: Retry-After
+    notes: >
+      Limits are subject to change at any time per the API Terms of Service (Section 2.4).
+      Implement exponential backoff and honor the Retry-After header when a 429 is received.
+  - name: Webhook Rate Limit
+    description: >
+      Webhook event delivery is subject to the same general transaction limits. The API
+      exposes webhook request history and retry functionality for missed deliveries.
+    scope: account
+    limitPublished: false
+    throttledStatusCode: 429
+    retryAfterHeader: Retry-After
+errorHandling:
+  - statusCode: 429
+    meaning: Too Many Requests — rate limit exceeded
+    action: Pause requests, wait for the Retry-After period, then resume with exponential backoff.
+  - statusCode: 401
+    meaning: Unauthorized — invalid or expired OAuth access token
+    action: Refresh the OAuth token and retry the request.
+  - statusCode: 403
+    meaning: Forbidden — token lacks the required OAuth scope for this endpoint
+    action: Re-authorize with the correct scopes.
+contact:
+  apiSupport: apisupport@gomotive.com
+  termsOfService: https://gomotive.com/legal/api-terms-of-service/

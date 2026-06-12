@@ -1,0 +1,69 @@
+spec: API Commons Plans 0.1
+provider: Motive
+providerId: motive
+created: 2026-06-12
+modified: 2026-06-12
+reconciled: true
+description: >
+  Motive does not publish a public self-serve API pricing menu. API access is bundled with
+  commercial fleet management subscriptions (typically quoted per vehicle per month) and
+  governed by the Motive API Terms of Service. Partners and developers must contact
+  techpartners@gomotive.com for access tiers and volume arrangements. The Developer Portal
+  offers a free developer account for building and testing integrations.
+plans:
+  - name: Developer (Free)
+    type: free
+    description: >
+      Free developer account via the Motive Developer Portal. Intended for building and
+      testing integrations against sandbox or limited production data. No fleet subscription
+      required to obtain API credentials.
+    quotas:
+      - name: API Transactions
+        type: quota
+        description: Limited transaction volume set at Motive's discretion; specific limits not published.
+        metered: false
+        boolean: false
+    price:
+      amount: 0
+      currency: USD
+      period: month
+  - name: Commercial Fleet Subscription
+    type: paid
+    description: >
+      API access bundled with a Motive fleet management subscription. Pricing is per vehicle
+      per month and varies by fleet size, contract length, and feature set. Estimated market
+      rate is approximately $35 per vehicle per month; contact sales for an exact quote.
+    quotas:
+      - name: API Transactions
+        type: quota
+        description: >
+          Transaction limits set by Motive at its sole discretion and adjustable at any time
+          per the API Terms of Service. No specific published numeric limit.
+        metered: true
+        boolean: false
+    price:
+      amount: 35
+      currency: USD
+      period: month
+      unit: vehicle
+      note: Estimated; actual pricing requires a sales quote.
+  - name: Enterprise / Partner
+    type: enterprise
+    description: >
+      Custom arrangements for ISVs and large fleet operators. Access to full API surface
+      including App Marketplace publishing. Negotiated via techpartners@gomotive.com.
+    quotas:
+      - name: API Transactions
+        type: quota
+        description: Negotiated limits based on partner agreement.
+        metered: true
+        boolean: false
+    price:
+      amount: 0
+      currency: USD
+      period: month
+      note: Custom pricing negotiated with Motive partner team.
+contact:
+  sales: https://gomotive.com/contact/
+  techPartners: techpartners@gomotive.com
+  apiSupport: apisupport@gomotive.com
