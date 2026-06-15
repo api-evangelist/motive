@@ -13,5 +13,24 @@
     "AI",
     "Driver Safety"
   ],
-  "confirmed": "2026-06-12"
+  "confirmed": "2026-06-12",
+  "repo": "motive",
+  "feeds": [
+    {
+      "source": "https://twitter.com/Motive_inc",
+      "feed_url": "https://twitter.com/Motive_inc",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://gomotive.com/blog/",
+      "feed_url": "https://gomotive.com/feed/",
+      "title": "",
+      "saved": 3,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 3,
+  "fetched": "2026-06-14T20:42:17Z"
 }
