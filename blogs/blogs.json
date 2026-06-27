@@ -17,6 +17,13 @@
   "repo": "motive",
   "feeds": [
     {
+      "source": "https://gomotive.com/blog/feed",
+      "feed_url": "https://gomotive.com/blog/feed",
+      "title": "",
+      "saved": 4,
+      "method": "feed"
+    },
+    {
       "source": "https://twitter.com/Motive_inc",
       "feed_url": "https://twitter.com/Motive_inc",
       "title": "",
@@ -27,10 +34,10 @@
       "source": "https://gomotive.com/blog/",
       "feed_url": "https://gomotive.com/feed/",
       "title": "",
-      "saved": 3,
+      "saved": 0,
       "method": "discovered"
     }
   ],
-  "post_count": 3,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 7,
+  "fetched": "2026-06-27T12:03:07Z"
 }
