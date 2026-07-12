@@ -53,6 +53,10 @@ apis:
       - FN: Motive API Support
         email: apisupport@gomotive.com
 common:
+  - type: TrustCenter
+    url: security/motive-trust-center.yml
+  - type: DomainSecurity
+    url: security/motive-domain-security.yml
   - type: Website
     url: https://gomotive.com/
   - type: Documentation
