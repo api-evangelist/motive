@@ -20,7 +20,7 @@
       "source": "https://gomotive.com/blog/feed",
       "feed_url": "https://gomotive.com/blog/feed",
       "title": "",
-      "saved": 4,
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -31,6 +31,13 @@
       "method": "none"
     },
     {
+      "source": "https://gomotive.com/feed/",
+      "feed_url": "https://gomotive.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://gomotive.com/blog/",
       "feed_url": "https://gomotive.com/feed/",
       "title": "",
@@ -38,6 +45,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 7,
-  "fetched": "2026-06-27T12:03:07Z"
+  "post_count": 19,
+  "fetched": "2026-07-11T11:50:51Z"
 }
