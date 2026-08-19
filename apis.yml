@@ -17,7 +17,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/motive.png
 url: https://raw.githubusercontent.com/api-evangelist/motive/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 description: >
   Motive (formerly KeepTruckin) is a fleet management platform serving more than 120,000 businesses across trucking,
   logistics, construction, agriculture, and field service industries. The Motive REST API provides programmatic
