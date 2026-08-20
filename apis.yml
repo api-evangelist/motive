@@ -34,6 +34,18 @@ tags:
   - Hours of Service
   - ELD
   - IFTA
+  - Dash Cam
+  - Dispatch
+  - Compliance
+  - Driver Management
+tags_raw:
+  - Fleet Management
+  - Trucking
+  - Logistics
+  - GPS Tracking
+  - Hours of Service
+  - ELD
+  - IFTA
   - Dashcam
   - Dispatch
   - Compliance
@@ -48,6 +60,13 @@ apis:
     humanURL: https://developer.gomotive.com/
     baseURL: https://api.gomotive.com
     tags:
+      - Fleet Management
+      - GPS Tracking
+      - Hours of Service
+      - IFTA
+      - Dispatch
+      - Webhook
+    tags_raw:
       - Fleet Management
       - GPS Tracking
       - Hours of Service
