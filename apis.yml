@@ -49,6 +49,8 @@ tags:
   - Dispatch
   - Compliance
   - Driver Management
+  - Telematics
+  - Fleet
 tags_raw:
   - Fleet Management
   - Trucking
@@ -61,6 +63,8 @@ tags_raw:
   - Dispatch
   - Compliance
   - Driver Management
+  - Telematics
+  - Fleet
 apis:
   - name: Motive Fleet API
     description: >
