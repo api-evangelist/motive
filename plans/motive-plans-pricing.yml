@@ -72,3 +72,28 @@ contact:
   sales: https://gomotive.com/contact/
   techPartners: techpartners@gomotive.com
   apiSupport: apisupport@gomotive.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - negotiated
+  units: []
+  plans:
+  - name: Developer (Free)
+    access: free
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Commercial Fleet Subscription
+    access: paid
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise / Partner
+    access: enterprise
+    model: negotiated
+    model_how: derived
+    units: []
+    periods: []
