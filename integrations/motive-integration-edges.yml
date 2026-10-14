@@ -2,6 +2,7 @@ generated: '2026-10-14'
 method: searched
 checked:
 - okta/integrations/okta-integration-edges.yml
+- servicetitan/integrations/servicetitan-integration-edges.yml
 source:
 - okta/integrations/okta-integration-edges.yml
 edges:
@@ -26,3 +27,22 @@ edges:
   - OKTA_VERIFIED
   features:
   - OIDC
+- partner_name: ServiceTitan (own)
+  partner: servicetitan
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.servicetitan.com/partner/go-motive
+  mirror_of: servicetitan/integrations/servicetitan-integration-edges.yml
+  apps:
+  - Motive
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: Fleet & GPS
+  badges:
+  - Certified App
