@@ -6,6 +6,12 @@ checked:
 - https://zapier.com/api/v4/apps/
 - okta/integrations/okta-integration-edges.yml
 - servicetitan/integrations/servicetitan-integration-edges.yml
+- https://a16z.com/portfolio/
+- https://www.battery.com/company/
+- https://www.battery.com/wp-admin/admin-ajax.php
+- https://www.indexventures.com/companies/
+- https://www.sequoiacap.com/our-companies/
+- https://www.sequoiacap.com/sitemap.xml
 source:
 - okta/integrations/okta-integration-edges.yml
 edges:
@@ -100,3 +106,30 @@ edges:
     builder: Pipedream repo (component)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Index Ventures
+  partner: index-ventures
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.indexventures.com/companies/motive/
+  category: vc portfolio participation
+  contract_reference:
+    register: Index Ventures companies (indexventures.com/companies/)
+    standard: null
+    spec_file: null
+    role: vc-portfolio-company
+    registered_name: Motive
+    register_id: https://www.indexventures.com/companies/motive/
+    register_country: north-america
+    register_website: https://gomotive.com/
+    matched_domain: gomotive.com
+    matched_by: domain
+    signal_note: 'participation only: the venture firm''s own published portfolio lists the company (investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-vc-portfolios.py
+    detected: '2026-10-21'
+    sector: mobility
+  detected_by: sweep-vc-portfolios.py
+  first_seen: '2026-10-21'
