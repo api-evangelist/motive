@@ -12,6 +12,8 @@ checked:
 - https://www.indexventures.com/companies/
 - https://www.sequoiacap.com/our-companies/
 - https://www.sequoiacap.com/sitemap.xml
+- https://eld.fmcsa.dot.gov/List/GetListOfELDs?listType=Revoked
+- https://eld.fmcsa.dot.gov/List/Index
 source:
 - okta/integrations/okta-integration-edges.yml
 edges:
@@ -133,3 +135,39 @@ edges:
     sector: mobility
   detected_by: sweep-vc-portfolios.py
   first_seen: '2026-10-21'
+- partner_name: FMCSA registered Electronic Logging Devices (self-certified ELD list + revoked devices)
+  partner: null
+  partner_match: register
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://eld.fmcsa.dot.gov/List/Index
+  category: US FMCSA Electronic Logging Device registration (hours of service)
+  contract_reference:
+    register: FMCSA registered Electronic Logging Devices (self-certified ELD list + revoked devices)
+    standard: FMCSA ELD technical specifications (49 CFR Part 395 Subpart B, Appendix A)
+    spec_file: null
+    role: eld-manufacturer
+    registered_name: Motive Technologies, Inc.
+    matched_domain: gomotive.com
+    matched_by: domain
+    eld_status: active
+    certified_products:
+    - product: Electronic Logging Device
+      product_type: Electronic Logging Device
+      standard: FMCSA ELD technical specifications (49 CFR Part 395 Subpart B, Appendix A)
+      lapsed: false
+      self_certified: true
+    devices:
+    - device: Motive ELD
+      model: LBB-1 and higher
+      eld_identifier: MOTIVE
+      status: active
+    signal_note: 'certified_products = one entry for the ELD product type, SELF-certified by the manufacturer against
+      the FMCSA technical specifications (lapsed: true when every listed device is revoked); device rows are context,
+      never counted'
+    detected_by: sweep-fmcsa-eld-registered-devices.py
+    detected: '2026-10-22'
+  detected_by: sweep-fmcsa-eld-registered-devices.py
+  first_seen: '2026-10-22'
