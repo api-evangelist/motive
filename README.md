@@ -1,4 +1,4 @@
-# Motive (motive)
+# Motive
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,52 +64,114 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Motive (formerly KeepTruckin) is a fleet management platform serving more than 120,000 businesses across trucking, logistics, construction, agriculture, and field service industries. The Motive REST API provides programmatic access to driver management, vehicle tracking, Hours of Service (HOS) compliance, IFTA reporting, dashcam events, dispatch workflows, geofencing, and real-time location data. Developers authenticate via OAuth 2.0 with scoped access tokens and can reach endpoints at `api.gomotive.com` (or the legacy `api.keeptruckin.com` base URL). The self-serve Developer Portal allows partners to build and publish apps to the Motive App Marketplace.
+Motive (formerly KeepTruckin) is a fleet management platform serving more than 120,000 businesses across trucking, logistics, construction, agriculture, and field service industries. The Motive REST API provides programmatic access to driver management, vehicle tracking, Hours of Service (HOS) compliance, IFTA reporting, dashcam events, dispatch workflows, geofencing, and real-time location data. Developers authenticate via OAuth 2.0 with scoped access tokens and can reach endpoints at api.gomotive.com (or the legacy api.keeptruckin.com base URL). The self-serve Developer Portal allows partners to build and publish apps to the Motive App Marketplace, and Postman collections are available alongside interactive API reference documentation.
 
-APIs.json: https://raw.githubusercontent.com/api-evangelist/motive/refs/heads/main/apis.yml
+**Areas:** Fleet Management · Trucking · Logistics · GPS Tracking · Hours of Service · ELD · IFTA · Dash Cam · Dispatch · Compliance · Driver Management · Telematics
 
-Naftiko: https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=motive-api-evangelist&utm_content=repo
+## Motive on APIs.io
 
-## Tags
+Everything profiled for Motive is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/motive/](https://apis.io/providers/motive/)** — or go straight to one of the APIs or properties below.
 
-Fleet Management, Trucking, Logistics, GPS Tracking, Hours of Service, ELD, IFTA, Dashcam, Dispatch, Compliance, Driver Management
+### APIs (1)
 
-## APIs
+- [Motive Fleet API](https://apis.io/apis/motive/motive-fleet-api/) — Core REST API providing access to driver management, vehicle tracking, Hours of Service logs, IFTA trip reports, inspection reports, dashcam events,…
 
-| Name | Description | Base URL |
-|------|-------------|----------|
-| Motive Fleet API | Core REST API for driver management, vehicle tracking, HOS, IFTA, dispatch, webhooks, and more | https://api.gomotive.com |
+### Published properties
 
-## Plans / Rate Limits / FinOps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| Resource | File |
-|----------|------|
-| Plans & Pricing | [plans/motive-plans-pricing.yml](plans/motive-plans-pricing.yml) |
-| Rate Limits | [rate-limits/motive-rate-limits.yml](rate-limits/motive-rate-limits.yml) |
-| FinOps | [finops/motive-finops.yml](finops/motive-finops.yml) |
+#### JSON-LD (1)
 
-Motive does not publish a public per-call API pricing schedule. API access is bundled with fleet management subscriptions (estimated ~$35/vehicle/month). Rate limits are set at Motive's discretion and are not publicly documented; a 429 status code with a `Retry-After` header is returned when limits are exceeded.
+Linked-data contexts for the provider's vocabulary.
 
-## Timestamps
+- [Motive Context](https://apis.io/jsonld/motive/motive-context/)
 
-- Created: 2026-06-12
-- Modified: 2026-06-12
+#### Security (2)
 
-## Common Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-| Type | URL |
-|------|-----|
-| Website | https://gomotive.com/ |
-| Developer Portal | https://developer.gomotive.com/ |
-| Documentation | https://developer-docs.gomotive.com/docs/introduction |
-| API Reference | https://developer-docs.gomotive.com/reference/introduction |
-| GitHub Organization | https://github.com/KeepTruckin |
-| LinkedIn | https://www.linkedin.com/company/motive-inc |
-| X / Twitter | https://twitter.com/Motive_inc |
-| Blog | https://gomotive.com/blog/ |
-| Status Page | https://status.gomotive.com/ |
-| Terms of Service | https://gomotive.com/legal/api-terms-of-service/ |
+- [Motive Domain Security](https://apis.io/security/motive/motive-domain-security/)
+- [Motive Trust Center](https://apis.io/security/motive/motive-trust-center/)
 
-## Maintainers
+#### Plans and pricing (1)
 
-- Kin Lane / kin@apievangelist.com
+Published plans, tiers and prices.
+
+- [Motive Plans Pricing](https://apis.io/plans/motive/motive-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Motive Rate Limits](https://apis.io/rate-limits/motive/motive-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Motive Finops](https://apis.io/finops/motive/motive-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://gomotive.com/)
+- [Documentation](https://developer-docs.gomotive.com/docs/introduction)
+- [API reference](https://developer-docs.gomotive.com/reference/introduction)
+- [Blog](https://gomotive.com/blog/)
+- [Terms of service](https://gomotive.com/legal/api-terms-of-service/)
+- [GitHub](https://github.com/KeepTruckin)
+- [Status](https://status.gomotive.com/)
+
+## API Evangelist rating
+
+**Kin Score 25.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 34.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 10.7 |
+| Access clarity | 26.3 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/motive/](https://apis.io/providers/motive/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Motive: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/motive/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
